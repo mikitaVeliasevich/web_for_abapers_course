@@ -1,0 +1,35 @@
+#container {
+    position: relative;
+    height: 250px;
+    width: 250px;
+    border: solid 3px black;
+    margin: 10% 37%;
+}
+
+#red {
+    position: absolute;
+    background-color: red;
+    height: 150px;
+    width: 150px;
+    left: 0;
+    top: 0;
+}
+
+#green {
+    z-index: 1;
+    position: absolute;
+    background-color: rgb(7, 255, 7);
+    height: 150px;
+    width: 150px;
+    top: 50px;
+    left: 50px;
+}
+
+#blue {
+    position: absolute;
+    background-color: blue;
+    height: 150px;
+    width: 150px;
+    bottom: 0;
+    right: 0;
+}
