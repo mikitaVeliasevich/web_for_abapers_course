@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.flexBox {
+    margin: 0;
+    flex: 1;
+}
+
+img {
+    width: 249px;
+    height: 300px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+
+@media(max-width: 1279px) {
+    img {
+        width: 250px;
+        height: 304px;
+    }
+    .bigImg {
+        width: 502px;
+        height: 600px;
+    }
+}
