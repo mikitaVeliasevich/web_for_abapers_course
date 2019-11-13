@@ -21,3 +21,12 @@ img {
         flex: 1 50%;
     }
 }
+
+@media(max-width: 800px) {
+    .item {
+        flex: 1 50%;
+    }
+    .item:nth-child(3n) {
+        flex: 1 100%;
+    }
+}
