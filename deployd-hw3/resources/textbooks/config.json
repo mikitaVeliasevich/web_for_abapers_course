@@ -1,0 +1,29 @@
+{
+	"type": "Collection",
+	"properties": {
+		"author": {
+			"name": "author",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "author",
+			"order": 0
+		},
+		"title": {
+			"name": "title",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "title",
+			"order": 1
+		},
+		"numberOfPages": {
+			"name": "numberOfPages",
+			"type": "number",
+			"typeLabel": "number",
+			"required": true,
+			"id": "numberOfPages",
+			"order": 2
+		}
+	}
+}
