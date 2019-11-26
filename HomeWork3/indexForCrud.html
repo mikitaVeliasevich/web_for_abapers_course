@@ -1,147 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script src="./crud.js" defer></script>
-</head>
-
-<body>
-    <div class="accordion" id="accordionExample">
-        <div class="card">
-            <div class="card-header" id="headingOne">
-                <h5 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
-                        aria-expanded="true" aria-controls="collapseOne">
-                        Create
-                    </button>
-                </h5>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./style.css" />
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"
+        ></script>
+        <script src="./crud.js" defer></script>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-3">
+                <div
+                    class="nav flex-column nav-pills"
+                    id="v-pills-tab"
+                    role="tablist"
+                    aria-orientation="vertical"
+                >
+                    <a
+                        class="nav-link active"
+                        id="v-pills-home-tab"
+                        data-toggle="pill"
+                        href="#v-pills-home"
+                        role="tab"
+                        aria-controls="v-pills-home"
+                        aria-selected="true"
+                        >Create</a
+                    >
+                    <a
+                        class="nav-link"
+                        id="pubutton"
+                        data-toggle="pill"
+                        href="#v-pills-messages"
+                        role="tab"
+                        aria-controls="v-pills-messages"
+                        aria-selected="false"
+                        >Update</a
+                    >
+                    <a
+                        class="nav-link"
+                        id="readDeletebutton"
+                        data-toggle="pill"
+                        href="#v-pills-settings"
+                        role="tab"
+                        aria-controls="v-pills-settings"
+                        aria-selected="false"
+                        >Read/Delete</a
+                    >
+                </div>
             </div>
+            <div class="col-9">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div
+                        class="tab-pane fade show active"
+                        id="v-pills-home"
+                        role="tabpanel"
+                        aria-labelledby="v-pills-home-tab"
+                    >
+                        <div class="card-body">
+                            <form id="createForm">
+                                <div class="form-group">
+                                    <label for="cauthor">Author</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="cauthor"
+                                        aria-describedby="emailHelp"
+                                        placeholder="Enter Author Name"
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="ctitle">Title</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="ctitle"
+                                        placeholder="Enter TextBook Title"
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="cnumberOfPages"
+                                        >Number of Pages</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="cnumberOfPages"
+                                        placeholder="Enter Number of Pages"
+                                    />
+                                </div>
+                                <button
+                                    type="submit"
+                                    id="cbutton"
+                                    class="btn btn-secondary"
+                                >
+                                    Submit
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div
+                        class="tab-pane fade"
+                        id="v-pills-messages"
+                        role="tabpanel"
+                        aria-labelledby="v-pills-messages-tab"
+                    >
+                        <div class="card-body">
+                            <form id="updateForm">
+                                <div class="form-group">
+                                    <label for="uid">ID</label>
+                                    <select id="uid" class="form-control">
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="uauthor">Author</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="uauthor"
+                                        aria-describedby="emailHelp"
+                                        placeholder="Enter Author Name"
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="utitle">Title</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="utitle"
+                                        placeholder="Enter TextBook Title"
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="unumberOfPages"
+                                        >Number of Pages</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="unumberOfPages"
+                                        placeholder="Enter Number of Pages"
+                                    />
+                                </div>
 
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                    <form id='createForm'>
-                        <div class="form-group">
-                            <label for="cauthor">Author</label>
-                            <input type="text" class="form-control" id="cauthor" aria-describedby="emailHelp"
-                                placeholder="Enter Author Name">
+                                <button
+                                    type="submit"
+                                    id="ubutton"
+                                    class="btn btn-secondary"
+                                >
+                                    Submit
+                                </button>
+                            </form>
                         </div>
-                        <div class="form-group">
-                            <label for="ctitle">Title</label>
-                            <input type="text" class="form-control" id="ctitle" placeholder="Enter TextBook Title">
+                    </div>
+                    <div
+                        class="tab-pane fade"
+                        id="v-pills-settings"
+                        role="tabpanel"
+                        aria-labelledby="v-pills-settings-tab"
+                    >
+                        <div class="card-body">
+                            <form id="deleteForm">
+                                <div class="form-group">
+                                    <label for="did">ID</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="did"
+                                        placeholder="Enter ID"
+                                    />
+                                </div>
+                                <button
+                                    type="submit"
+                                    id="dbutton"
+                                    class="btn btn-secondary"
+                                >
+                                    Delete
+                                </button>
+                            </form>
                         </div>
-                        <div class="form-group">
-                            <label for="cnumberOfPages">Number of Pages</label>
-                            <input type="text" class="form-control" id="cnumberOfPages" placeholder="Enter Number of Pages">
+                        <div class="card-body" id="readCardBody">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Author</th>
+                                        <th scope="col">Title</th>
+                                        <th scope="col">Number of Pages</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="rTBody">
+                                    <!--  <tr>
+                                        <th scope="row">1</th>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
                         </div>
-                        <button type="submit" id='cbutton' class="btn btn-primary">Submit</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="card">
-            <div class="card-header" id="headingTwo">
-                <h5 class="mb-0">
-                    <button id='rbutton' class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
-                        aria-expanded="false" aria-controls="collapseTwo">
-                        Read
-                    </button>
-                </h5>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Author</th>
-                                <th scope="col">Title</th>
-                                <th scope="col">Number of Pages</th>
-                            </tr>
-                        </thead>
-                        <tbody id='rTBody'>
-                            <!--  <tr>
-                                <th scope="row">1</th>
-                                <td>1</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>4</td>
-                            </tr> -->
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header" id="headingThree">
-                <h5 class="mb-0">
-                    <button id='pubutton' class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
-                        aria-expanded="false" aria-controls="collapseThree">
-                        Update
-                    </button>
-                </h5>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                <div class="card-body">
-                    <form id='updateForm'>
-                        <div class="form-group">
-                            <label for="uid">ID</label>
-                            <select id="uid" class="form-control">
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="uauthor">Author</label>
-                            <input type="text" class="form-control" id="uauthor" aria-describedby="emailHelp"
-                                placeholder="Enter Author Name">
-                        </div>
-                        <div class="form-group">
-                            <label for="utitle">Title</label>
-                            <input type="text" class="form-control" id="utitle" placeholder="Enter TextBook Title">
-                        </div>
-                        <div class="form-group">
-                            <label for="unumberOfPages">Number of Pages</label>
-                            <input type="text" class="form-control" id="unumberOfPages" placeholder="Enter Number of Pages">
-                        </div>
-
-                        <button type="submit" id='ubutton' class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header" id="headingFour">
-                <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour"
-                        aria-expanded="false" aria-controls="collapseFour">
-                        Delete
-                    </button>
-                </h5>
-            </div>
-            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                <div class="card-body">
-                    <form id='deleteForm'>
-                        <div class="form-group">
-                            <label for="did">ID</label>
-                            <input type="text" class="form-control" id="did" placeholder="Enter ID">
-                        </div>
-                        <button type="submit" id='dbutton' class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-
+    </body>
 </html>

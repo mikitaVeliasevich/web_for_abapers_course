@@ -38,7 +38,7 @@ function onRead() {
             var table = document.getElementById("rTBody").parentElement;
             table.replaceChild(resultTBody, document.getElementById("rTBody"));
             resultTBody.id = "rTBody";
-            console.log("success");
+            console.log("success read");
         }
     });
 
@@ -143,11 +143,14 @@ function parseTextBookToTableRow(TextBooks) {
 
 (function() {
     document.getElementById("cbutton").addEventListener("click", onCreate);
-    document.getElementById("rbutton").addEventListener("click", onRead);
+    document
+        .getElementById("readDeletebutton")
+        .addEventListener("click", onRead);
     document.getElementById("ubutton").addEventListener("click", onUpdate);
     document
         .getElementById("pubutton")
         .addEventListener("click", onPrepareUpdate);
     document.getElementById("dbutton").addEventListener("click", onDelete);
+    document.getElementById("dbutton").addEventListener("click", onRead);
     console.log("Handlers is set");
 })();
