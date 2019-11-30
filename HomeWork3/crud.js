@@ -1,5 +1,5 @@
-function onCreate(ev) {
-    ev.preventDefault();
+function onCreate(event) {
+    event.preventDefault();
 
     var data = JSON.stringify({
         author: String(document.getElementById("cauthor").value),
@@ -47,8 +47,8 @@ function onRead() {
     xhr.send();
 }
 
-function onPrepareUpdate(ev) {
-    ev.preventDefault();
+function onPrepareUpdate(event) {
+    event.preventDefault();
     xhrids = new XMLHttpRequest();
     xhrids.withCredentials = true;
 
@@ -72,8 +72,8 @@ function onPrepareUpdate(ev) {
     xhrids.send();
 }
 
-function onUpdate(ev) {
-    ev.preventDefault();
+function onUpdate(event) {
+    event.preventDefault();
 
     var data = JSON.stringify({
         author: String(document.getElementById("uauthor").value),
@@ -99,14 +99,15 @@ function onUpdate(ev) {
     xhr.send(data);
 }
 
-function onDelete(ev) {
-    ev.preventDefault();
+function onDelete(event) {
+    event.preventDefault();
     xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
 
     xhr.addEventListener("readystatechange", function() {
         if (this.readyState === 4) {
             console.log(this.responseText);
+            onRead();
         }
     });
 
@@ -151,6 +152,4 @@ function parseTextBookToTableRow(TextBooks) {
         .getElementById("pubutton")
         .addEventListener("click", onPrepareUpdate);
     document.getElementById("dbutton").addEventListener("click", onDelete);
-    document.getElementById("dbutton").addEventListener("click", onRead);
-    console.log("Handlers is set");
 })();
