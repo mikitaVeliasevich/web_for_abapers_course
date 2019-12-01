@@ -1,10 +1,40 @@
-var counter = 0;
-function addBookOnPage(obj) {
-    var newBookParagraph = document.createElement("p");
-    newBookParagraph.id = counter;
-    newBookParagraph.innerHTML =
-        counter + ". " + obj.getTitle() + ", " + obj.getAuthor();
-    document.body.appendChild(newBookParagraph);
+var counterForConsole = 0;
+var counterForHtml = 1;
+var books = [];
+
+function addBookOnPage(books) {
+    var resultDiv = document.createElement("div");
+    resultDiv.className = "container-fluid";
+    books.map(function(nthBook) {
+        resultDiv.appendChild(parseBookToRow(nthBook));
+    });
+    var container = document.getElementById("books").parentElement;
+    container.replaceChild(resultDiv, document.getElementById("books"));
+    resultDiv.id = "books";
+    console.log("success add");
+}
+
+function parseBookToRow(Book) {
+    var row = document.createElement("div");
+    row.className = "row";
+
+    id = document.createElement("div");
+    id.className = "col-4";
+    id.innerText = counterForHtml;
+    row.appendChild(id);
+
+    author = document.createElement("div");
+    author.className = "col-4";
+    author.innerText = Book.getAuthor();
+    row.appendChild(author);
+
+    title = document.createElement("div");
+    title.className = "col-4";
+    title.innerText = Book.getTitle();
+    row.appendChild(title);
+
+    counterForHtml++;
+    return row;
 }
 
 function Book(title, author) {
@@ -26,7 +56,7 @@ function Book(title, author) {
 
 Book.prototype.getInfoAboutBook = function() {
     return (
-        counter++ +
+        counterForConsole++ +
         ". " +
         "Book: " +
         this.getTitle() +
@@ -82,12 +112,19 @@ TextBook.prototype.getInfoAboutBook = function() {
 
 var book = new Book("Таинственная история Билли Миллигана", "Дэниел Киз");
 console.log(book.getInfoAboutBook());
-addBookOnPage(book);
+books.push(book);
 
-var audioBook = new AudioBook("Климов", "Aнаа Каренина", "Л.В. Толстой");
+var book1 = new Book("Лох", "А.Ю. Велесевич");
+console.log(book1.getInfoAboutBook());
+books.push(book1);
+
+var audioBook = new AudioBook("Климов", "Aнна Каренина", "Л.В. Толстой");
 console.log(audioBook.getInfoAboutBook());
-addBookOnPage(audioBook);
+books.push(audioBook);
 
 var textBook = new TextBook("637", "Три Товарища", "Э.М. Ремарк");
 console.log(textBook.getInfoAboutBook());
-addBookOnPage(textBook);
+books.push(textBook);
+
+console.log(books);
+addBookOnPage(books);

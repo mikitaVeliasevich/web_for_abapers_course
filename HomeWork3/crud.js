@@ -6,15 +6,15 @@ function onCreate(event) {
         title: String(document.getElementById("ctitle").value),
         numberOfPages: String(document.getElementById("cnumberOfPages").value)
     });
-    console.log(data);
     xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
     xhr.addEventListener("readystatechange", function() {
         if (this.readyState === 4) {
-            alert(this.responseText);
+            alert("Success Create!");
             document
                 .getElementById("createForm")
                 .dispatchEvent(new Event("submit"));
+            console.log(`Success create: ${this.response}`);
         }
     });
 
@@ -38,7 +38,7 @@ function onRead() {
             var table = document.getElementById("rTBody").parentElement;
             table.replaceChild(resultTBody, document.getElementById("rTBody"));
             resultTBody.id = "rTBody";
-            console.log("success read");
+            console.log("Success read!");
         }
     });
 
@@ -80,13 +80,12 @@ function onUpdate(event) {
         title: String(document.getElementById("utitle").value),
         numberOfPages: String(document.getElementById("unumberOfPages").value)
     });
-    console.log(data);
     xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
 
     xhr.addEventListener("readystatechange", function() {
         if (this.readyState === 4) {
-            console.log(this.responseText);
+            console.log("Edited Data:\n", this.responseText);
         }
     });
 
@@ -106,7 +105,7 @@ function onDelete(event) {
 
     xhr.addEventListener("readystatechange", function() {
         if (this.readyState === 4) {
-            console.log(this.responseText);
+            console.log("Success delete:\n", this.responseText);
             onRead();
         }
     });

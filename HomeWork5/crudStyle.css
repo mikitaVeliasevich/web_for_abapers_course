@@ -1,0 +1,19 @@
+a {
+    color: black;
+}
+a:hover {
+    color: #00000090;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    color: white;
+    background-color: #6c757d;
+}
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 0.5rem 1rem;
+}
+#readCardBody {
+    padding: 0px;
+}
