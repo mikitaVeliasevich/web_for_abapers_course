@@ -19,17 +19,17 @@ function parseBookToRow(Book) {
     row.className = "row";
 
     id = document.createElement("div");
-    id.className = "col-4";
+    id.className = "col";
     id.innerText = counterForHtml;
     row.appendChild(id);
 
     author = document.createElement("div");
-    author.className = "col-4";
+    author.className = "col";
     author.innerText = Book.getAuthor();
     row.appendChild(author);
 
     title = document.createElement("div");
-    title.className = "col-4";
+    title.className = "col";
     title.innerText = Book.getTitle();
     row.appendChild(title);
 
@@ -125,6 +125,10 @@ books.push(audioBook);
 var textBook = new TextBook("637", "Три Товарища", "Э.М. Ремарк");
 console.log(textBook.getInfoAboutBook());
 books.push(textBook);
+
+var textBook1 = new TextBook("10000", "Даник Лох Печальный", "Н.В. Велесевич");
+console.log(textBook1.getInfoAboutBook());
+books.push(textBook1);
 
 console.log(books);
 addBookOnPage(books);

@@ -113,15 +113,15 @@ class TextBook extends Book {
 }
 
 let book = new Book("Таинственная история Билли Миллигана", "Дэниел Киз");
-let _book = new Book("Аня Лох", "А.Ю. Велесевич");
+let book1 = new Book("Аня Лох", "А.Ю. Велесевич");
 let audioBook = new AudioBook("Климов", "Aнна Каренина", "Л.В. Толстой");
 let textBook = new TextBook("637", "Три Товарища", "Э.М. Ремарк");
 
 console.log(book.getInfoAboutBook());
-console.log(_book.getInfoAboutBook());
+console.log(book1.getInfoAboutBook());
 console.log(audioBook.getInfoAboutBook());
 console.log(textBook.getInfoAboutBook());
 
 let books = [];
-books.push(book, _book, audioBook, textBook);
+books.push(book, book1, audioBook, textBook);
 addBookOnPage(books);

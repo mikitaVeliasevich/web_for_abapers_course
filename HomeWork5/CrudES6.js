@@ -14,16 +14,14 @@ function onCreate(event) {
         }
     })
         .then(response => response.json())
-        .then(response =>
+        .then(response => {
             alert(
                 `Success create:\n  Author: ${response.author}\n  Title: ${response.title}\n  Number of Pages: ${response.numberOfPages}`
-            )
-        )
-        .then(response =>
+            );
             console.log(
                 `Success create:\n  Author: ${response.author}\n  Title: ${response.title}\n  Number of Pages: ${response.numberOfPages}`
-            )
-        )
+            );
+        })
         .catch(error => console.error("Error:", error));
 }
 
@@ -93,16 +91,14 @@ function onUpdate(event) {
         }
     )
         .then(response => response.json())
-        .then(response =>
+        .then(response => {
             alert(
                 `Success update:\n  Author: ${response.author}\n  Title: ${response.title}\n  Number of Pages: ${response.numberOfPages}`
-            )
-        )
-        .then(response =>
+            );
             console.log(
                 `Success update:\n  Author: ${response.author}\n  Title: ${response.title}\n  Number of Pages: ${response.numberOfPages}`
-            )
-        )
+            );
+        })
         .catch(error => console.error("Error:", error));
 }
 
