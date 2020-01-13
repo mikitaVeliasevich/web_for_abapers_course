@@ -1,0 +1,8 @@
+{"name":"Liza","email":"lizaveta.baradzina@leverx.com","phoneNumber":"375 29 325 33 22","street":"Pushkina","city":"Minsk","_id":"4rbm1UKd2Nrygldg","createdAt":{"$$date":1578925242465},"updatedAt":{"$$date":1578925242465}}
+{"name":"Nikita","email":"mikita.veliasevich@leverx.com","phoneNumber":"375 29 325 55 22","street":"Havrienko","city":"Minsk","_id":"PYGtgZFxN0F5K3ND","createdAt":{"$$date":1578925131163},"updatedAt":{"$$date":1578925351449}}
+{"name":"Alexey","email":"aliaxei.rauba@leverx.com","phoneNumber":"375 29 325 44 22","street":"Gogolya","city":"Minsk","_id":"gcFEPLYStk3oY7sk","createdAt":{"$$date":1578925206799},"updatedAt":{"$$date":1578925206799}}
+{"name":"Yura","email":"yura.karlyanok@leverx.com","phoneNumber":"375 11 666 33 22","street":"Figova","city":"Minsk","_id":"vveectjGDoOAZ3YM","createdAt":{"$$date":1578925274833},"updatedAt":{"$$date":1578927090064}}
+{"name":"Danik","email":"daniil.veliasevich@leverx.com","phoneNumber":"375 11 213 33 22","street":"Pidora","city":"Minsk","_id":"zHmlobTZeI01psra","createdAt":{"$$date":1578935251925},"updatedAt":{"$$date":1578935251925}}
+{"name":"giyfyfgky","email":"lihougui@leverx.com","phoneNumber":"375 11 213 33 22","street":"Pidora","city":"Minsk","_id":"18pb20AXL7hGKVp0","createdAt":{"$$date":1578935435251},"updatedAt":{"$$date":1578935435251}}
+{"$$deleted":true,"_id":"18pb20AXL7hGKVp0"}
+{"name":"Danik","email":"daniil.veliasevich@leverx.com","phoneNumber":"375 11 213 33 22","street":"Mara","city":"Minsk","_id":"zHmlobTZeI01psra","createdAt":{"$$date":1578935251925},"updatedAt":{"$$date":1578935636394}}

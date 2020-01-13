@@ -1,0 +1,26 @@
+{
+    "name": "nodejs_hw2",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "nedb": "^1.8.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.6.2",
+        "@babel/preset-env": "^7.6.2",
+        "grunt": "^1.0.4",
+        "grunt-babel": "^8.0.0",
+        "grunt-contrib-uglify": "^4.0.1",
+        "grunt-contrib-watch": "latest",
+        "load-grunt-tasks": "^5.1.0"
+    }
+}
